@@ -39,7 +39,7 @@ class LoginHandler(RequestHandler):
 		data = db.userDetails.find({'uname':username})
 		while (yield data.fetch_next):
 			finalData = data.next_object()
-		if(finalData['pass']==password):
+		if(finalData['password']==password):
 			self.write({"Response":True})
 		else:
 			self.write({"Response":False})
@@ -82,10 +82,8 @@ class clientReadServerStats(RequestHandler):
 	def post(self):
 		uname = self.get_argument('uname')
 		#FIND IN THE DB
-		sys_info_arr =[]
 		data = db.clientStats.find({'uname':uname})
 		while (yield data.fetch_next):
-			sys_info_arr.append(data.next_object())
 			finalData = data.next_object()
 		JSONdata = {}
 		JSONdata['Most Recent Data'] = (finalData)
@@ -101,7 +99,6 @@ class clientAnalyseServerStats(RequestHandler):
 		data = db.clientStats.find({'uname':uname})
 		while (yield data.fetch_next):
 			sys_info_arr.append(data.next_object())
-			finalData = data.next_object()
 		JSONdata = {}
 		JSONdata['Stats array'] = (sys_info_arr)
 		self.write(JSONEncoder().encode(JSONdata))
