@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ppametrics.io</string>
+    <string name="userName">User Name</string>
+    <string name="submit">  Submit  </string>
+    <string name="email">Email ID</string>
+    <string name="createAcc"> Create new Account </string>
+    <string name="newUser">New User</string>
+    <string name="signUP">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="loginHint">Username / E-Mail ID</string>
+    <string name="password">Password</string>
+    <string name="passwordRe">Confirm Password</string>
+    <string name="ip">http://162.243.66.62:6969</string>
+    <string name="node">Node </string>
+    <string name="system">System</string>
+    <string name="release">Release </string>
+
+</resources>
