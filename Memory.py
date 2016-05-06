@@ -9,7 +9,7 @@ import datetime
 
 os.environ['no_proxy'] = '127.0.0.1,localhost'
 #ENTER YOUR USERNAME HERE
-uname = 'four'
+uname = 'seven'
 flag = False
 
 ip = '162.243.66.62:6969'

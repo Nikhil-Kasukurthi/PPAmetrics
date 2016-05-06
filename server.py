@@ -28,7 +28,7 @@ class JSONEncoder(json.JSONEncoder):
 
 class MainHandler(RequestHandler):
 	def get(self):
-		self.render('templates/login.html')
+		self.render('First step towards awesomeness! \n Happy Birthday akka!')
 
 class LoginHandler(RequestHandler):
 	@removeslash
