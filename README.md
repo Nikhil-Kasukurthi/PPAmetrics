@@ -1,5 +1,6 @@
 # PPAmetrics
-An easy way to monitor your server. 
+###An easy way to monitor your server. 
+![alt tag](https://raw.githubusercontent.com/Nikhil-Kasukurthi/PPAmetrics/master/icon.jpg)
 
 ###Initial setup
 ####For Ubuntu servers 
