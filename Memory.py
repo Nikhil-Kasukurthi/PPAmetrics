@@ -85,11 +85,13 @@ def networkInfo():
     temp=psutil.net_io_counters(pernic=True)
 
     for nic in psutil.net_io_counters(pernic=True):
-        x={'NIC':nic,
+        x={
+           'NIC':nic,
            'Bytes sent': temp[nic].bytes_sent,
            'Bytes received':temp[nic].bytes_recv,
            'Packets Sent':temp[nic].packets_sent,
-           'Packet received':temp[nic].packets_recv}
+           'Packet received':temp[nic].packets_recv
+        }
         network_arr.append(x)
     data = {}
     data['uname'] = uname
