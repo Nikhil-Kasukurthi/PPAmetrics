@@ -37,7 +37,7 @@ class LoginHandler(RequestHandler):
 		username = self.get_argument('username')
 		password = self.get_argument('password')
 		data = db.userDetails.find({'uname':username})
-		finalData = []
+		finalData = None
 		while (yield data.fetch_next):
 			finalData = data.next_object()
 		if(finalData['password']==password):
