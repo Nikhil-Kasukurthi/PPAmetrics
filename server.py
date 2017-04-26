@@ -148,6 +148,7 @@ class networkInfoRead(RequestHandler):
 		while (yield data.fetch_next):
 			network_arr.append(data.next_object())
 			finalData = data.next_object()
+			print finalData
 		JSONdata = {}
 		JSONdata['Network Stats array'] = (network_arr)
 		print(JSONdata)
