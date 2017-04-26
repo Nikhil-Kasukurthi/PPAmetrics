@@ -121,11 +121,11 @@ class clientInfoRead(RequestHandler):
 	def post(self):
 		uname = self.get_argument('uname')
 		#FIND IN THE DB
-		sys_info_arr =[]
+		sys_info_arr = []
 		data = db.userStats.find({'uname':uname})
 		while (yield data.fetch_next):
 			sys_info_arr.append(data.next_object())
-		self.write(JSONEncoder().encode(sys_info_arr))
+		self.write(JSONEncoder().encode(sys_info_arr[0]))
 
 class networkInfoInsert(RequestHandler):
 	@removeslash
