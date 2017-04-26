@@ -82,6 +82,7 @@ class clientReadServerStats(RequestHandler):
 	def post(self):
 		uname = self.get_argument('uname')
 		#FIND IN THE DB
+		finalData = []
 		data = db.clientStats.find({'uname':uname})
 		while (yield data.fetch_next):
 			finalData = data.next_object()
@@ -149,6 +150,7 @@ class networkInfoRead(RequestHandler):
 			finalData = data.next_object()
 		JSONdata = {}
 		JSONdata['Network Stats array'] = (network_arr)
+		print(JSONdata)
 		self.write(JSONEncoder().encode(JSONdata))
 
 application = tornado.web.Application([
