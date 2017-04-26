@@ -144,6 +144,7 @@ class networkInfoRead(RequestHandler):
 		#FIND IN THE DB
 		network_arr =[]
 		data = db.networkInfo.find({'uname':uname})
+		print data
 		while (yield data.fetch_next):
 			network_arr.append(data.next_object())
 			finalData = data.next_object()
