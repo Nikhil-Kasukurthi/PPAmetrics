@@ -124,8 +124,7 @@ class clientInfoRead(RequestHandler):
 		data = db.userStats.find({'uname':uname})
 		while (yield data.fetch_next):
 			sys_info_arr.append(data.next_object())
-			finalData = data.next_object()
-		self.write(JSONEncoder().encode(finalData))
+		self.write(JSONEncoder().encode(sys_info_arr))
 
 class networkInfoInsert(RequestHandler):
 	@removeslash
