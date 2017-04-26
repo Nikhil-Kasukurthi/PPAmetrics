@@ -12,7 +12,7 @@ os.environ['no_proxy'] = '127.0.0.1,localhost'
 uname = 'seven'
 flag = False
 
-ip = '162.243.66.62:6969'
+ip = '139.59.74.89:6969'
 #ip = '127.0.0.1:6969'
 
 def bytes_norm(n):
