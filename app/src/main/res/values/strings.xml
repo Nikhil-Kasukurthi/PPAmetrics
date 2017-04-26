@@ -10,7 +10,7 @@
     <string name="loginHint">Username / E-Mail ID</string>
     <string name="password">Password</string>
     <string name="passwordRe">Confirm Password</string>
-    <string name="ip">http://162.243.66.62:6969</string>
+    <string name="ip">http://139.59.74.89:6969</string>
     <string name="node">Node </string>
     <string name="system">System</string>
     <string name="release">Release </string>
